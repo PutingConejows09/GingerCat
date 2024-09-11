@@ -2,12 +2,12 @@ import { expression } from "@/data/expression";
 import { Fragment, useState } from "react";
 
 interface Props {
-    setIsPlay: any
     setQuestionIndex: any
 }
-export default function Question1 (props: Props) {
+export default function Question2 (props: Props) {
 
-    const { setIsPlay, setQuestionIndex } = props
+    const { setQuestionIndex } = props
+    const [isHovered, setIsHovered] = useState(false);
 
     const [data, setData] = useState<any>(
         {
@@ -20,11 +20,10 @@ export default function Question1 (props: Props) {
 
 
     const handleButton = (answer:string) => {
-        setIsPlay((curr:boolean) => true)
         setData((curr:any) => (
             {
                 ...curr,
-                currExpression: expression.yey,
+                currExpression: expression.leaf_excited,
                 showNextButton: true,
                 answer: answer
 
@@ -35,14 +34,22 @@ export default function Question1 (props: Props) {
         <Fragment>
             <div className="max-w-[500px] flex flex-col items-center m-auto mt-20">
             <img src={data.currExpression} width={200}/>
-            <p className="text-3xl font-semibold text-center">Hellooo Pwede ko mangdisturbo kadyut nimo?</p>
+            <p className="text-3xl font-semibold text-center">Kamusta na U????</p>
             <br></br>
             <p className="text-2xl font-semibold text-center">Your Answer: {data?.answer}</p>
             <br></br>
             <br></br>
             <div className="flex gap-4">
-                <button onClick={() => handleButton("Sige")} className={`${data.showNextButton? "hidden": "block"}`}>Sige</button>
-                <button onClick={() => handleButton("No choice, Sige na lang")} className={`${data.showNextButton? "hidden": "block"}`}>No choice, Sige na lang</button>
+                <button onClick={() => handleButton("Okay Ra")} className={`${data.showNextButton? "hidden": "block"}`}>Okay Ra</button>
+                <button 
+                    onClick={() => 
+                    handleButton("Mingaw ko nimo :>")} 
+                    className={`${data.showNextButton? "hidden": "block"}`}
+                    onMouseEnter={() => setIsHovered(true)}
+                    onMouseLeave={() => setIsHovered(false)}
+                >
+                    {isHovered? "Mingaw ko nimo :>": "Dili okay"}
+                </button>
                 <button onClick={() => setQuestionIndex((curr:number) => curr+1)} className={`${data.showNextButton? "block": "hidden"}`}>Next</button>
             </div>
             </div>

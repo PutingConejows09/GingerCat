@@ -20,5 +20,5 @@ body {
 }
 
 button {
-  @apply p-4 bg-white text-black
+  @apply p-4 bg-white text-black rounded-md border-2 border-pink-900
 }

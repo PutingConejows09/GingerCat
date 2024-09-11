@@ -6,4 +6,5 @@ export const expression = {
     sad: "assets/gif/sad.gif",
     shy_cute: "assets/gif/shy-cute.gif",
     yey: "assets/gif/yey.gif",
+    wow: "assets/gif/nibble_wow.gif",
 }
