@@ -56,7 +56,7 @@ export default function Question5 (props: Props) {
                 >
                     Amaw ako makalimot? Never
                 </button>
-                <button onClick={() => setQuestionIndex((curr:number) => curr+2)} className={`${data.showNextButton? "block": "hidden"}`}>Next</button>
+                <button onClick={() => setQuestionIndex((curr:number) => curr+3)} className={`${data.showNextButton? "block": "hidden"}`}>Next</button>
             </div>
             </div>
       </Fragment>

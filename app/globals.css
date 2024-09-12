@@ -22,3 +22,7 @@ body {
 button {
   @apply p-4 bg-white text-black rounded-md border-2 border-pink-900
 }
+
+#tsparticles canvas {
+  z-index: -1;
+}
