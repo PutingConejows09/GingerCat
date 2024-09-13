@@ -15,9 +15,13 @@ export default function BirthdayCountdown() {
 
     useEffect(() => {
         setInterval(() => {
-            countDown()
+            if(!checkBirthdate()){
+                countDown()
+            }
+
         },1000)
     },[])
+
     const countDown = () => {
         const today = dayjs()
         const birthdate = dayjs('2024-09-14')
@@ -36,12 +40,33 @@ export default function BirthdayCountdown() {
         ))
     }
 
+    const checkBirthdate = () => {
+
+        const birthdate = dayjs('2024-09-14')
+        const today = dayjs().startOf('day');
+        const isToday = today.isSame(birthdate, 'day');
+
+        return isToday
+    }
+
     return (
         <div>
             <div className="mt-10">
-                <img src={expression.birthday_countdown} className="m-auto" height={100}/>
-                <h1 className="text-center text-3xl">Birthday Countdown</h1>
-                <h1 className="text-center text-3xl font-bold">{dateCountDown.hours} hr/s  {dateCountDown.mins} min/s {dateCountDown.sec} s</h1>
+                {
+                    checkBirthdate() 
+
+                    ? <div>
+                        <img src={expression.happy_birthday} className="m-auto" height={100}/>
+                        <h1 className="text-center text-3xl font-bold">Happy Birthday Ma'am Rynskieee!!!</h1>
+                     </div>
+
+                    : <div>
+                        <img src={expression.birthday_countdown} className="m-auto" height={100}/>
+                        <h1 className="text-center text-3xl">Birthday Countdown</h1>
+                        <h1 className="text-center text-3xl font-bold">{dateCountDown.hours} hr/s  {dateCountDown.mins} min/s {dateCountDown.sec} s</h1>
+                     </div>
+                }
+                
             </div>    
         </div>
     )

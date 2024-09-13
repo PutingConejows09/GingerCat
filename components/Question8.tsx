@@ -63,7 +63,7 @@ export default function Question7 (props: Props) {
                 <img src={expression.leaf_excited} width={200}/>
             </div>
             
-            <p className="text-3xl font-semibold text-center">{"See You On September 19, 2024 4:10pm :>"}</p>
+            <p className="text-3xl font-semibold text-center">{"See You On September 19, 2024 4:10 pm. :>"}</p>
             <br></br>
             {/* <p className="text-2xl font-semibold text-center">Your Answer: {data?.answer}</p> */}
             <br></br>

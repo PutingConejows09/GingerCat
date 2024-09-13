@@ -93,10 +93,10 @@ export default function ParticleComponent(){
           value: 0.5,
         },
         shape: {
-          type: "circle",
+          type: "star",
         },
         size: {
-          value: { min: 5, max: 8 },
+          value: { min: 7, max: 10 },
         },
       },
       detectRetina: true,
