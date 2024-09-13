@@ -40,7 +40,7 @@ export default function Question7 (props: Props) {
     const handleButton = (answer:string, part: "right" | "left") => {
 
         if(part == "right") {
-            setQuestionIndex((curr:number) => curr+1)
+            // setQuestionIndex((curr:number) => curr+1)
         } else {
             setData((curr:any) => (
                 {
