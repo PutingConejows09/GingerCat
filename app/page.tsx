@@ -1,6 +1,7 @@
 "use client"
 
 import AudioPlay from "@/components/AudioPlay";
+import BirthdayCountdown from "@/components/BirthdayCountdown";
 import ParticleComponent from "@/components/ParticleComponent";
 import Question from "@/components/Question";
 import Question1 from "@/components/Question1";
@@ -55,7 +56,9 @@ export default function Home() {
 
     <Question8
       setQuestionIndex={setQuestionIndex}
-    />
+    />,
+
+    <BirthdayCountdown />
   ]
 
   

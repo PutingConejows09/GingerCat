@@ -64,10 +64,10 @@ export default function ParticleComponent(){
       },
       particles: {
         color: {
-          value: "#ffffff",
+          value: "#A020F0",
         },
         links: {
-          color: "#ffffff",
+          color: "#A020F0",
           distance: 150,
           enable: true,
           opacity: 1,
