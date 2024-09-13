@@ -1,6 +1,7 @@
 import { expression } from "@/data/expression";
 import dayjs from "dayjs"
 import { useEffect, useState } from "react";
+import Footer from "./Footer";
 
 export default function BirthdayCountdown() {
 
@@ -67,7 +68,8 @@ export default function BirthdayCountdown() {
                      </div>
                 }
                 
-            </div>    
+            </div>   
+            <Footer /> 
         </div>
     )
 }
