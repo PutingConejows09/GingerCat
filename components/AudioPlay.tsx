@@ -9,10 +9,7 @@ export default function AudioPlay(props:Props) {
 
     const [currMusicIndex, setCurrMusicIndex] = useState<number>(0)
     const musics = [    
-        "assets/musics/my_love.mp3",
-        "assets/musics/ikaw_at_ako.mp3",
-        "assets/musics/palagi.mp3",
-        "assets/musics/sining.mp3",
+        "assets/musics/Ikaw at ako.mp3"
     ]
 
 

@@ -22,18 +22,18 @@ export default function Question3 (props: Props) {
     const handleButton = (answer:string) => {
 
         const express:any = {
-            "Oo Kaayo": expression.sad,
-            "Hmmm wala man": expression.yey
+            "Oo Sobra": expression.sad,
+            "Hmmm hindi naman": expression.yey
         }
 
-        if(answer.toLowerCase() == "oo kaayo") {
+        if(answer.toLowerCase() == "oo sobra") {
             setQuestionIndex((curr:number) => curr+1)
         }else {
             setData((curr:any) => (
                 {
                     ...curr,
                     currExpression: express[answer],
-                    showNextButton: answer.toLowerCase() == "hmmm wala man",
+                    showNextButton: answer.toLowerCase() == "hmmm hindi naman",
                     answer: answer
     
                 }
@@ -44,21 +44,21 @@ export default function Question3 (props: Props) {
         <Fragment>
             <div className="max-w-[500px] flex flex-col items-center m-auto mt-20">
             <img src={data.currExpression} width={200}/>
-            <p className="text-3xl font-semibold text-center">I'm so sorry. Nasuko pa ba ka nako?</p>
+            <p className="text-3xl font-semibold text-center">I apologize for everything. Galit ka pa ba sa akin?</p>
             <br></br>
             <p className="text-2xl font-semibold text-center">Your Answer: {data?.answer}</p>
             <br></br>
             <br></br>
             <div className="flex gap-4">
-                <button onClick={() => handleButton("Hmmm wala man")} className={`${data.answer.toLowerCase() == "hmmm wala man"? "hidden": "block"}`}>Hmmm wala man</button>
+                <button onClick={() => handleButton("Hmmm hindi naman")} className={`${data.answer.toLowerCase() == "hmmm hindi naman"? "hidden": "block"}`}>Hmmm hindi naman</button>
                 <button 
                     onClick={() => 
-                    handleButton("Oo Kaayo")} 
-                    className={`${data.answer.toLowerCase() == "hmmm wala man"? "hidden": "block"}`}
+                    handleButton("Oo sobra")} 
+                    className={`${data.answer.toLowerCase() == "hmmm hindi naman"? "hidden": "block"}`}
                     onMouseEnter={() => setIsHovered(true)}
                     onMouseLeave={() => setIsHovered(false)}
                 >
-                    Oo Kaayo
+                    Oo sobra
                 </button>
                 <button onClick={() => setQuestionIndex((curr:number) => curr+2)} className={`${data.showNextButton? "block": "hidden"}`}>Next</button>
             </div>

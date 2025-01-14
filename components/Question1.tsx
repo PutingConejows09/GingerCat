@@ -35,7 +35,7 @@ export default function Question1 (props: Props) {
         <Fragment>
             <div className="max-w-[500px] flex flex-col items-center m-auto mt-20">
             <img src={data.currExpression} width={200}/>
-            <p className="text-3xl font-semibold text-center">Hellooo Pwede ko mangdisturbo kadyut nimo?</p>
+            <p className="text-3xl font-semibold text-center">Hello, pwede ba kitang makausap?</p>
             <br></br>
             <p className="text-2xl font-semibold text-center">Your Answer: {data?.answer}</p>
             <br></br>
